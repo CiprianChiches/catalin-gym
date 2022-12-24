@@ -409,7 +409,7 @@ ol {
 .nav-menu ul li a {
 	color: #ffffff;
 	display: block;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -3255,3 +3255,7 @@ ol {
 		font-size: 28px;
 	}
 }
+
+
+/*metabolism*/
+
