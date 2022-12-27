@@ -335,6 +335,7 @@ ol {
 
 .logo a {
 	display: inline-block;
+	margin-top: -3rem;
 }
 
 .nav-menu {
