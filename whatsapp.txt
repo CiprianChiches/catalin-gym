@@ -1,0 +1,132 @@
+<!-- mesaje -->
+<!-- 
+		class name position button open :
+		.open-top-left
+		.open-top-right
+		.open-bottom-left
+		.open-bottom-right
+	-->
+	<div id="open" class="shadow-sm rounded-circle open-bottom-right"><img src="./img/whatsapp.png" width="70" ></div>
+
+	<!-- 
+		class name position form message :
+		.form-top-left
+		.form-top-right
+		.form-bottom-left
+		.form-bottom-right
+	-->
+
+	<div id="form" class="card shadow-sm border-0 form-bottom-right d-none" >
+		<div class="card-header bg-success text-white" >
+			<span>Chat Whatsapp</span>
+			<span id="close" class="float-right">close</span>
+		</div>
+		<div class="card-body bg-light pb-0">
+			<div class="form-group">
+				<div class="alert alert-info bg-white border-0 shadow-sm p-2">Cu ce va putem ajuta ?</div>
+			</div>
+		</div>
+		<div class="card-footer border-0 bg-white">
+			<div class="input-group flex-nowrap">
+				<textarea id="message" class="form-control shadow-none" autofocus></textarea>
+				<div class="input-group-prepend">
+					<span class="input-group-text bg-transparent border-0" id="send">Send</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script>
+$(document).ready(function() {
+
+$('#open').click(function() {
+    $(this).addClass("d-none");
+    $('#form').removeClass("d-none");
+    });
+
+$('#close').click(function() {
+    $('#open').removeClass("d-none");
+    $('#form').addClass("d-none");
+    });
+
+$('#send').click(function() {
+    var msg = $("#message").val()
+    if (msg != "") {
+        $(location).attr('href',' https://wa.me/0724278194?text='+msg);				
+    }
+    });
+});
+    </script>
+
+    <style>
+        .open-top-left{
+	position: fixed; 
+	margin-left: 30px; 
+	margin-top: 30px;
+	top: 0;
+	left: 0; 
+}
+
+.open-top-right{
+	position: fixed; 
+	margin-right: 30px; 
+	margin-top: 30px;
+	top: 0;
+	right: 0; 
+}
+
+.open-bottom-left{
+	position: fixed; 
+	margin-left: 30px; 
+	margin-bottom: 30px;
+	left: 0; 
+	bottom: 0;
+}
+
+.open-bottom-right{
+	position: fixed; 
+	margin-right: 30px; 
+	margin-bottom: 30px;
+	right: 0; 
+	bottom: 0; 
+}
+
+.form-top-left{
+	position: fixed; 
+	width: 18rem; 
+	margin-left: 30px; 
+	margin-top: 30px; 
+	top: 0; 
+	left: 0; 
+}
+
+.form-top-right{
+	position: fixed; 
+	width: 18rem; 
+	margin-right: 30px; 
+	margin-top: 30px; 
+	top: 0; 
+	right: 0; 
+}
+
+.form-bottom-left{
+	position: fixed; 
+	width: 18rem; 
+	margin-left: 30px; 
+	margin-bottom: 30px; 
+	bottom: 0; 
+	left: 0; 
+}
+
+.form-bottom-right{
+	position: fixed; 
+	width: 18rem; 
+	margin-right: 30px; 
+	margin-bottom: 30px; 
+	bottom: 0; 
+	right: 0; 
+}
+    </style>
+
+<!-- mesaje final -->
+   
